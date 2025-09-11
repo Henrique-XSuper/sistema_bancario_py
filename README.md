@@ -16,6 +16,7 @@ Visualizar Todas as Contas
 Lista todas as contas cadastradas com seus respectivos dados.
 Encerrar Programa
 Finaliza a execução do sistema.
+Persistência de Dados: Os dados são salvos automaticamente em contas.json.
 ---
 🖥️ Como Executar
 Certifique-se de ter o Python 3 instalado.
@@ -25,9 +26,10 @@ python banco.py
 Siga as instruções exibidas no menu interativo.
 ---
 📌 Observações
-O sistema não utiliza banco de dados, portanto os dados são perdidos ao encerrar o programa.
-Pode ser expandido com:
-Persistência em arquivos (.json, .csv, ou banco de dados).
-Interface gráfica com tkinter ou PyQt.
-Validação de dados e autenticação de usuários.
+Os dados são salvos automaticamente em contas.json após cada operação.
+O sistema pode ser expandido com:
+Interface gráfica com Tkinter ou web com Streamlit
+Autenticação de usuários,
+Relatórios em PDF ou Excel,
+Validação de dados de entrada.
 ---
