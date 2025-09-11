@@ -1,4 +1,18 @@
+import json
+import os
+
 contas = {}
+
+
+if os.path.exists("contas.json"):
+    with open("contas.json", "r") as f:
+        contas = json.load(f)
+
+# Funções do sistema
+
+def salvar_dados():
+    with open("contas.json", "w") as f:
+        json.dump(contas, f)
 
 def criar_conta():
     numero = input("Número da conta: ")
@@ -7,6 +21,7 @@ def criar_conta():
     tipo = input("Tipo (Poupança/Conta Corrente): ")
     saldo = float(input("Saldo inicial: "))
     contas[numero] = [nome, idade, tipo, saldo]
+    salvar_dados()
     print("Conta criada com sucesso.")
 
 def depositar():
@@ -14,6 +29,7 @@ def depositar():
     valor = float(input("Valor do depósito: "))
     if numero in contas:
         contas[numero][3] += valor
+        salvar_dados()
         print("Depósito realizado com sucesso.")
     else:
         print("Conta não encontrada.")
@@ -23,6 +39,7 @@ def sacar():
     valor = float(input("Valor do saque: "))
     if numero in contas and contas[numero][3] >= valor:
         contas[numero][3] -= valor
+        salvar_dados()
         print("Saque realizado com sucesso.")
         if contas[numero][3] < 500:
             print("Atenção: saldo baixo.")
@@ -67,6 +84,8 @@ while True:
     elif escolha == '4':
         verificar_saldo()
     elif escolha == '5':
+        salvar_dados()
+        print("Encerrando o sistema...")
         break
     elif escolha == '6':
         visualizar_todas_contas()
