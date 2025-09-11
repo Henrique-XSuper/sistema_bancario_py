@@ -26,7 +26,6 @@ Finaliza a execução do sistema.
 Certifique-se de ter o Python 3 instalado.
 Salve o código em um arquivo chamado banco.py.
 Execute o script no terminal com:
-
 python banco.py
 ---
 
