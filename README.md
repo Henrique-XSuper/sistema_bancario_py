@@ -6,19 +6,14 @@ Este projeto é um sistema bancário simples desenvolvido em Python, com interfa
 🎯 Funcionalidades
 Criar Conta
 Cadastro de uma nova conta com número, nome, idade, tipo (Poupança ou Conta Corrente) e saldo inicial.
-
 Depositar
 Permite adicionar um valor ao saldo de uma conta existente.
-
 Sacar
 Permite retirar um valor do saldo, com verificação de saldo suficiente e alerta de saldo baixo.
-
 Verificar Saldo
 Exibe o saldo atual de uma conta específica.
-
 Visualizar Todas as Contas
 Lista todas as contas cadastradas com seus respectivos dados.
-
 Encerrar Programa
 Finaliza a execução do sistema.
 ---
